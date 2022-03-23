@@ -1,0 +1,18 @@
+query getAllCharacters($page: Int, $name: String) {
+  characters(page: $page, filter: { name: $name }) {
+    info {
+      count
+      pages
+      prev
+      next
+    }
+    results {
+      id
+      status
+      name
+      image
+      species
+      gender
+    }
+  }
+}

@@ -1,0 +1,10 @@
+schema: https://rickandmortyapi.com/graphql
+documents: './services/**/*.gql'
+generates:
+  ./@types/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-vue-apollo
+    config:
+      withSmartOperationFunctions: true
